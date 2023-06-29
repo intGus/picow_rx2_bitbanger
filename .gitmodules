@@ -1,0 +1,3 @@
+[submodule "picow_xbox"]
+	path = picow_xbox
+	url = https://github.com/intGus/picow_xbox.git
