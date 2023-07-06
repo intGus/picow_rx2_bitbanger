@@ -1,4 +1,4 @@
-# Pico_W bit-banger to control an RC Toy equipped with an RX2 IC
+# Pico_W bit-banger to control an RC Toy
 
 A  Raspberry Pico project to control Radio Controlled toys using the integrated circuit **RX2** found in many inexpensive RC toys. The idea is to connect just ground and one pin from the Pico to the signal input of the RX2 and from there, send the data in the specified format (check the TX2/RX2 datasheet for more information) to control up to two motors connected to the RX2. No need for an external H-Bridge or any extra pins connected. [Check this Arduino Forum Thread for more information](https://forum.arduino.cc/t/control-cheap-rc-toy-car-rx2-chip-with-arduino-using-only-one-pin-solved/167268/8).
 
