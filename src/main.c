@@ -13,7 +13,7 @@
 
 
 #define SIGNAL_PIN 14
-#define MUSIC_PIN 16
+#define MUSIC_PIN 28
 #define BUTTON_PIN 0
 
 void main(void) {
