@@ -11,7 +11,7 @@ This project is using a fork of [usedbytes/picow_ds4](https://github.com/usedbyt
 Before using this library, make sure you have the following:
 
 - Raspberry Pico or Pico W board
-- A RC toy with any version of the RX2 receiver. I'm using [this one](https://a.co/d/gfmupyS)
+- An RC toy with any version of the RX2 receiver. I'm using [this one](https://a.co/d/gfmupyS)
 - [Pico SDK](https://www.raspberrypi.com/documentation/pico-sdk/) installed
 - I'm also using an Xbox controller, but you don't need one if you wanna run autonomously or use a web server through wifi.
 
