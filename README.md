@@ -1,4 +1,4 @@
-# Pico_W bit-banger to control a Radio Controlled Toy RX2 IC
+# Pico_W bit-banger to control an RC Toy equipped with an RX2 IC
 
 A  Raspberry Pico project to control Radio Controlled toys using the integrated circuit **RX2** found in many inexpensive RC toys. The idea is to connect just ground and one pin from the Pico to the signal input of the RX2 and from there, send the data in the specified format (check the TX2/RX2 datasheet for more information) to control up to two motors connected to the RX2. No need for an external H-Bridge or any extra pins connected. [Check this Arduino Forum Thread for more information](https://forum.arduino.cc/t/control-cheap-rc-toy-car-rx2-chip-with-arduino-using-only-one-pin-solved/167268/8).
 
@@ -11,15 +11,15 @@ This project is using a fork of [usedbytes/picow_ds4](https://github.com/usedbyt
 Before using this library, make sure you have the following:
 
 - Raspberry Pico or Pico W board
-- A RC toy with any version of RX2 receiver. I'm using [this one](https://a.co/d/gfmupyS)
+- A RC toy with any version of the RX2 receiver. I'm using [this one](https://a.co/d/gfmupyS)
 - [Pico SDK](https://www.raspberrypi.com/documentation/pico-sdk/) installed
-- I'm also using an Xbox controller, but you don't need one if you wanna run autonomously or use a webserver through wifi.
+- I'm also using an Xbox controller, but you don't need one if you wanna run autonomously or use a web server through wifi.
 
 ## Getting Started
 
 Check the instructions for the [Xbox Controller](https://github.com/intGus/picow_xbox_controller) submodule if you plan to use it. Otherwise, skip step 3
 
-On the toy, you need to find the RX2 chip and try to identify the Signal Input pin. There are two datasheets attached to help you figure out which pin to use (on most cases will be pin 3, in my case is pin 6),
+On the toy, you need to find the RX2 chip and try to identify the Signal Input pin. There are two [datasheets](https://github.com/intGus/picow_rx2_bitbanger/tree/main/datasheets) attached to help you figure out which pin to use (in most cases will be pin 3, in my case is pin 6),
 once you identified the pin, you'll need to connect that pin to any pin in the Pico and connect ground from the toy to any ground on the Pico. I'm using pin 14 with a voltage divider to drop output to 1.6v just for safety.
 
 **IMPORTANT:** If you want to power the Pico from the toy car, make sure the voltage is not over or under the limits of the input voltage of your board! then connect the positive lead from the batteries to the VSYS pin on your Pico.
@@ -32,7 +32,7 @@ After that, you can use the following steps  to clone and build the file needed 
 4. Create the build directory `mkdir build`
 5. Open the build directory `cd build`
 6. Execute `cmake -DPICO_BOARD=pico_w -DPICO_SDK_PATH=/your/path/to/pico-sdk ../` make sure to replace with the appropriate path to your pico-sdk directory or remove 
-   if you are using an environmental variable and replace with `-DPICO_BOARD=pico` if using the regular Pico
+   if you are using an environmental variable and replace it with `-DPICO_BOARD=pico` if using the regular Pico
 7. Execute `make`
 8. Drag and drop or copy the `picow_rx2.uf2` file into the pico in BOOTSEL mode
 
